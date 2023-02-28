@@ -2851,8 +2851,24 @@ h1, h2, h3, h4,
   color: #fff;
 }
 
+.btn.btn-secondary1 {
+  background: #398378;
+  border: 1px solid #ffffff;
+  color: #fff;
+}
+
+.mtmb{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .btn.btn-secondary:hover, .btn.btn-secondary:focus, .btn.btn-secondary:active {
   border: 1px solid #398378;
+  color: #398378;
+  background: white;
+}
+.btn.btn-secondary1:hover, .btn.btn-secondary1:focus, .btn.btn-secondary1:active {
+  border: 1px solid #ffffff;
   color: #398378;
   background: white;
 }
@@ -3525,7 +3541,7 @@ textarea.form-control {
 .ftco-footer {
   font-size: 14px;
   background: #141313;
-  padding: 6em 0;
+  padding: 4em 0 0;
 }
 
 .ftco-footer .ftco-footer-widget {
@@ -3534,11 +3550,17 @@ textarea.form-control {
 }
 
 .ftco-footer .ftco-footer-widget h2 {
-  font-weight: normal;
+  /* font-weight: normal;
+  color: #fff;
+  margin-bottom: 40px;
+  font-size: 22px;
+  font-weight: 700; */
   color: #fff;
   margin-bottom: 40px;
   font-size: 22px;
   font-weight: 700;
+  height: 42px;
+  margin-top: 40px;
 }
 
 .ftco-footer .ftco-footer-widget .logo {
@@ -4087,12 +4109,12 @@ textarea.form-control {
 .appointment-form .form-control {
   border: transparent !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
-  height: 58px !important;
-  padding-left: 0;
+  height: 40px !important;
+  padding-left: 10px;
   padding-right: 0;
   background: transparent !important;
   color: rgba(255, 255, 255, 0.9) !important;
-  font-size: 16px;
+  font-size: 15px;
   border-radius: 0px;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
@@ -4120,6 +4142,7 @@ textarea.form-control {
 
 .appointment-form .form-control:focus, .appointment-form .form-control:active {
   border-color: #fff;
+  background: transparent;
 }
 
 .appointment-form textarea.form-control {
