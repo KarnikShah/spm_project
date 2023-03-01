@@ -2917,7 +2917,7 @@ h1, h2, h3, h4,
 }
 
 .ftco-services .services:nth-child(even) {
-  background: #0c75fb;
+  background: #206057;
 }
 
 .ftco-services .services:nth-child(even) .icon {
@@ -2929,8 +2929,9 @@ h1, h2, h3, h4,
   position: relative;
   width: 80px;
   height: 80px;
-  background: #61a6fd;
+  background: #206057;
   margin: 0 auto;
+  margin-top: 1rem;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
