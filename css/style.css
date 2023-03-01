@@ -2953,7 +2953,7 @@ h1, h2, h3, h4,
 }
 
 .services-2 {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .services-2 .icon {
@@ -2962,6 +2962,10 @@ h1, h2, h3, h4,
   width: 60px;
   height: 60px;
   border: 2px solid #398378;
+}
+
+.pa a:hover{
+  text-decoration: underline;
 }
 
 .services-2 .icon span {
@@ -3542,6 +3546,43 @@ textarea.form-control {
   font-size: 14px;
   background: #141313;
   padding: 4em 0 0;
+}
+
+.c-providers__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 155px;
+  margin-left: 15px;
+  margin-bottom: 0;
+  padding-left: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.w-list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.c-providers__list-item {
+  margin-right: 20px;
+  padding-left: 22.22px;
+  background-image: url(../images/checkmark.svg);
+  background-position: 0 50%;
+  background-size: auto;
+  background-repeat: no-repeat;
+  color: #398378;
+  font-size: 16px;
+  line-height: 31px;
+  font-weight: 700;
+  letter-spacing: .1px;
 }
 
 .ftco-footer .ftco-footer-widget {
@@ -4536,4 +4577,43 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px;
   }
+}
+
+#slideshow {
+  overflow: hidden;
+  height: 510px;
+  width: 510px;
+  margin: 0 auto;
+}
+
+#slideshow img{
+  border-radius: 30px;
+  border: 2px dashed #398378;
+}
+
+.slide-wrapper {
+  width: 2040px;
+  -webkit-animation: slide 18s ease infinite;
+}
+
+.slide {
+  float: left;
+  height: 510px;
+  width: 510px;
+}
+
+.slide-number {
+  color: #000;
+  text-align: center;
+  font-size: 10em;
+}
+
+@-webkit-keyframes slide {
+  20% {margin-left: 0px;}
+  30% {margin-left: -510px;}
+  50% {margin-left: -510px;}
+  60% {margin-left: -1020px;}
+  70% {margin-left: -1020px;}
+  80% {margin-left: -1530px;}
+  90% {margin-left: -1530px;}
 }
