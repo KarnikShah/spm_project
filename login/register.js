@@ -3,6 +3,8 @@ const minc = document.getElementById("minc");
 const country = document.getElementById("country");
 const mincDiv = document.getElementById("minc-div");
 const types = document.getElementsByName("type");
+const password = document.getElementById("password");
+const confirmPassword = document.getElementById("confirm-password");
 
 //Auto capitalize and hyphen minc field.
 minc.addEventListener("input", (event) => {
@@ -53,7 +55,7 @@ if (!isCountryValid) {
     }, { once: true });
 }
 
-//display/hide minc option
+//display/hide minc option depending on user type.
 function onChangeTypeHandler(event) {
     if (this.value === "patient") {
         mincDiv.hidden = true;
@@ -68,3 +70,16 @@ function onChangeTypeHandler(event) {
 }
 types.forEach((type) => type.addEventListener("change", onChangeTypeHandler));
 
+//verify same confirm password.
+[password, confirmPassword].forEach((passwordField) => {
+    passwordField.addEventListener("input", (event) => {
+        if (password.value !== confirmPassword.value) {
+            const error = "Make sure password and confirmed password are the same."
+            confirmPassword.setCustomValidity(error);
+        }
+        else {
+            const noError = "";
+            confirmPassword.setCustomValidity(noError);
+        }
+    });
+});

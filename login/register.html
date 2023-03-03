@@ -318,9 +318,13 @@
                 <label for="email">E-mail</label>
                 <input type="text" name="email" id="email" placeholder="Email" autocomplete="email" required>
                 <!-- Password -->
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Password"
-                    autocomplete="current-password" minlength="8" required>
+                <fieldset>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password"
+                    autocomplete="new-password" minlength="8" required>
+                    <label for="password">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm Password" autocomplete="new-password" required>
+                </fieldset>
                 <!-- User Type -->
                 <fieldset>
                     <legend>I am a ...</legend>
