@@ -1,6 +1,5 @@
 
 const minc = document.getElementById("minc");
-const country = document.getElementById("country");
 const mincDiv = document.getElementById("minc-div");
 const types = document.getElementsByName("type");
 const password = document.getElementById("password");
@@ -43,17 +42,6 @@ minc.addEventListener("input", (event) => {
         }
     }
 });
-
-//Country validation.
-const isCountryValid = country.value;
-if (!isCountryValid) {
-    const error = "Select a country.";
-    country.setCustomValidity(error);
-    country.addEventListener("change", (event) => {
-        const noError = "";
-        country.setCustomValidity(noError);
-    }, { once: true });
-}
 
 //display/hide minc option depending on user type.
 function onChangeTypeHandler(event) {
