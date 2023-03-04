@@ -5,6 +5,18 @@ const types = document.getElementsByName("type");
 const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirm-password");
 
+const registerButton = document.getElementById('register-choice');
+const loginButton = document.getElementById('login-choice');
+const authenticateContainer = document.getElementById('authenticate-container');
+
+//Control cover panel.
+registerButton.addEventListener('click', () => {
+	authenticateContainer.classList.add("right-panel-active");
+});
+loginButton.addEventListener('click', () => {
+	authenticateContainer.classList.remove("right-panel-active");
+});
+
 //Auto capitalize and hyphen minc field.
 minc.addEventListener("input", (event) => {
     //remember user cursor position.
@@ -71,3 +83,4 @@ types.forEach((type) => type.addEventListener("change", onChangeTypeHandler));
         }
     });
 });
+

@@ -3,13 +3,39 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="authenticate.css">
     <script src="./authenticate.js" defer></script>
     </link>
 </head>
 
 <body>
-    <div class="container">
-        <div class="form-container">
+    <div class="container" id="authenticate-container">
+        <div class="form-container login-container">
+            <!-- TODO: formaction should link to relevant php -->
+            <form action="???login???.php" method="get" autocomplete="on" name="form">
+                <h1>Login</h1>
+                <!-- Email -->
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Email" autocomplete="email" required>
+                <!-- Password -->
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password" autocomplete="current-password" minlength="8" required>
+                <!-- User Type -->
+                <!-- <fieldset>
+                    <legend>I am a ...</legend>
+                    <input type="radio" name="type" value="patient" id="patient" checked>
+                    <label for="patient">Patient</label>
+                    <input type="radio" name="type" value="counselor" id="counselor">
+                    <label for="counselor">Counselor</label>
+                    <input type="radio" name="type" value="doctor" id="doctor">
+                    <label for="doctor">Doctor</label>
+                </fieldset> -->
+
+                <!-- Submit -->
+                <input type="submit" value="Login">
+            </form>
+        </div>
+        <div class="form-container register-container">
             <!-- TODO: formaction should link to relevant php -->
             <form action="???register???.php" method="post" autocomplete="on" name="form">
                 <h1>Register</h1>
@@ -28,23 +54,20 @@
                 <input type="text" name="name" id="name" placeholder="Full Name" autocomplete="name" required>
                 <!-- Date of Birth -->
                 <label for="date-of-birth">Date of Birth</label>
-                <input type="date" name="date-of-birth" id="date-of-birth" pattern="\d{4}-\d{2}-\d{2}"
-                    autocomplete="bday" required>
+                <input type="date" name="date-of-birth" id="date-of-birth" pattern="\d{4}-\d{2}-\d{2}" autocomplete="bday" required>
                 <!-- Address -->
                 <label for="address">Address</label>
                 <textarea rows="3" cols="40" name="address" id="address" placeholder="221B Baker St&#10;Marylebone&#10;London&#10;NW1 6XE, UK" autocomplete="street-address" required></textarea>
                 <!-- Phone Number -->
                 <label for="phone">Phone Number</label>
-                <input type="text" name="phone" id="phone" placeholder="Phone Number" pattern="\d*" autocomplete="tel"
-                    required>
+                <input type="text" name="phone" id="phone" placeholder="Phone Number" pattern="\d*" autocomplete="tel" required>
                 <!-- Email -->
                 <label for="email">E-mail</label>
                 <input type="text" name="email" id="email" placeholder="Email" autocomplete="email" required>
                 <!-- Password -->
                 <fieldset>
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Password"
-                    autocomplete="new-password" minlength="8" required>
+                    <input type="password" name="password" id="password" placeholder="Password" autocomplete="new-password" minlength="8" required>
                     <label for="password">Confirm Password</label>
                     <input type="password" id="confirm-password" placeholder="Confirm Password" autocomplete="new-password" required>
                 </fieldset>
@@ -53,9 +76,8 @@
                 <!-- Last digit is supposed to be a check digit, but the formula for it could not be found. -->
                 <div id="minc-div" hidden>
                     <label for="minc">MINC (Four letters and 8 numbers)</label>
-                    <input type="text" name="minc" id="minc" placeholder="____-####-####" pattern="[A-Z]{4}-\d{4}-\d{4}"
-                        minlength="14" maxlength="14" disabled>
-                    Note: Currently this website has not signed a Licensed User Agreement with MINC#NIMC.
+                    <input type="text" name="minc" id="minc" placeholder="____-####-####" pattern="[A-Z]{4}-\d{4}-\d{4}" minlength="14" maxlength="14" disabled>
+                    <p>Note: Currently this website has not signed a Licensed User Agreement with MINC#NIMC.</p>
                 </div>
 
 
@@ -63,7 +85,20 @@
                 <input type="submit" value="Register">
             </form>
         </div>
+        <!-- Cover -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Authenticate yourself to connect with us.</p>
+                    <button class="ghost" id="login-choice">Login</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Greetings!</h1>
+                    <p>Register your details to get started.</p>
+                    <button class="ghost" id="register-choice">Register</button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
-
-</html>
