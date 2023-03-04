@@ -1,9 +1,9 @@
 
-const minc = document.getElementById("minc");
-const mincDiv = document.getElementById("minc-div");
-const types = document.getElementsByName("type");
-const password = document.getElementById("password");
-const confirmPassword = document.getElementById("confirm-password");
+const minc = document.getElementById("register-minc");
+const mincDiv = document.getElementById("register-minc-div");
+const types = document.getElementsByName("register-type");
+const password = document.getElementById("register-password");
+const confirmPassword = document.getElementById("register-confirm-password");
 
 const registerButton = document.getElementById('register-choice');
 const loginButton = document.getElementById('login-choice');
@@ -83,4 +83,3 @@ types.forEach((type) => type.addEventListener("change", onChangeTypeHandler));
         }
     });
 });
-
