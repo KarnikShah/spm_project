@@ -40,14 +40,14 @@
             <form action="???register???.php" method="post" autocomplete="on" name="register-form">
                 <h1>Register</h1>
                 <!-- User Type -->
-                <fieldset>
+                <fieldset id="type-fields">
                     <legend>I am a ...</legend>
                     <input type="radio" name="type" value="patient" id="register-patient" checked>
-                    <label for="patient">Patient</label>
+                    <label for="register-patient">Patient</label>
                     <input type="radio" name="type" value="counselor" id="register-counselor">
-                    <label for="counselor">Counselor</label>
+                    <label for="register-counselor">Counselor</label>
                     <input type="radio" name="type" value="doctor" id="register-doctor">
-                    <label for="doctor">Doctor</label>
+                    <label for="register-doctor">Doctor</label>
                 </fieldset>
                 <!-- Full Name -->
                 <input type="text" name="name" id="register-name" placeholder="Full Name" autocomplete="name" required>
