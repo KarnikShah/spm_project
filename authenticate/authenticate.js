@@ -16,7 +16,7 @@ loginButton.addEventListener('click', () => {
 ///Register portion
 const minc = document.getElementById("register-minc");
 const mincDiv = document.getElementById("register-minc-div");
-const types = document.getElementsByName("register-type");
+const types = document.getElementsByName("type");
 const password = document.getElementById("register-password");
 const confirmPassword = document.getElementById("register-confirm-password");
 const toggleViewPassword = document.getElementById("register-see-password");
