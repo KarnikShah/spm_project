@@ -70,6 +70,10 @@ input {
     width: 100%;
 }
 
+fieldset > input {
+    width: initial;
+}
+
 textarea {
     max-width: 100%;
 }
