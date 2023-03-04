@@ -1,10 +1,4 @@
-
-const minc = document.getElementById("register-minc");
-const mincDiv = document.getElementById("register-minc-div");
-const types = document.getElementsByName("register-type");
-const password = document.getElementById("register-password");
-const confirmPassword = document.getElementById("register-confirm-password");
-
+///Switch between portion
 const registerButton = document.getElementById('register-choice');
 const loginButton = document.getElementById('login-choice');
 const authenticateContainer = document.getElementById('authenticate-container');
@@ -16,6 +10,16 @@ registerButton.addEventListener('click', () => {
 loginButton.addEventListener('click', () => {
 	authenticateContainer.classList.remove("right-panel-active");
 });
+
+///Login portion
+
+///Register portion
+const minc = document.getElementById("register-minc");
+const mincDiv = document.getElementById("register-minc-div");
+const types = document.getElementsByName("register-type");
+const password = document.getElementById("register-password");
+const confirmPassword = document.getElementById("register-confirm-password");
+const toggleViewPassword = document.getElementById("register-see-password");
 
 //Auto capitalize and hyphen minc field.
 minc.addEventListener("input", (event) => {
@@ -82,4 +86,16 @@ types.forEach((type) => type.addEventListener("change", onChangeTypeHandler));
             confirmPassword.setCustomValidity(noError);
         }
     });
+});
+
+//toggle password view
+toggleViewPassword.addEventListener("click", (event) => {
+    const passwordVisibleType = "text";
+    const passwordInvisibleType = "password";
+    
+    const shouldPasswordBeVisible = password.type == passwordInvisibleType;
+    const visibility = shouldPasswordBeVisible ? passwordVisibleType : passwordInvisibleType;
+
+    password.type = visibility;
+    confirmPassword.type = visibility;
 });

@@ -57,7 +57,7 @@
                 <!-- Address -->
                 <textarea rows="3" cols="40" name="address" id="register-address" placeholder="221B Baker St&#10;Marylebone&#10;London&#10;NW1 6XE, UK" autocomplete="street-address" required></textarea>
                 <!-- Phone Number -->
-                <input type="text" name="phone" id="register-phone" placeholder="Phone Number" pattern="\d*" autocomplete="tel" required>
+                <input type="text" name="phone" id="register-phone" placeholder="Phone Number" pattern="(\+\d{1,2}[-\s.]?)?([(]\d{3}[)]|\d{3})[-\s.]?\d{3}[-\s.]?\d{4}?" autocomplete="tel" required>
                 <!-- Email -->
                 <input type="text" name="email" id="register-email" placeholder="Email" autocomplete="email" required>
                 <!-- Password -->
@@ -71,7 +71,7 @@
                         Confirm Password
                         <input type="password" id="register-confirm-password" placeholder="Confirm Password" autocomplete="new-password" required>
                     </label>
-                    
+                    <button type="button" id="register-see-password">Toggle view password</button>
                 </fieldset>
 
                 <!-- MINC -->
